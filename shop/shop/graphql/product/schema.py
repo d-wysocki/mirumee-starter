@@ -2,7 +2,7 @@ import graphene
 
 from .types import ProductType, ProductVariantType
 from ...product.models import Product, ProductVariant
-from .mutations import ProductCreate
+from .mutations import ProductCreate, ProductVariantCreate
 
 
 class ProductQueries(graphene.ObjectType):
@@ -29,3 +29,4 @@ class ProductQueries(graphene.ObjectType):
 
 class ProductMutations(graphene.ObjectType):
     product_create = ProductCreate.Field()
+    product_variant_create = ProductVariantCreate.Field()
